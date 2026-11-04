@@ -1,0 +1,101 @@
+/* CSS Document */
+
+body {
+background-image:url(../images/bg.gif);
+background-position:top;
+background-repeat:repeat-x;
+background-color:#FFFFFF;
+margin: 0px;
+padding: 15px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color: #243459;
+}
+
+#content {
+padding: 0px 15px;
+margin: 15px 0px;
+border-left: 1px solid #D4D8DF;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+text-align:left;
+}
+
+#content ul{
+margin-left:5px;
+padding-left:5px;
+}
+
+#content li{
+font-weight: normal;
+padding-left: 0px;
+}
+
+#content table, td{
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+text-align:left;
+}
+
+#content a:link, #content a:visited {
+text-decoration:none;
+color: #00F;
+}
+
+#content a:hover{
+text-decoration:underline;
+color:#F27800;
+}
+
+#content table, td ul{
+margin-left:5px;
+padding-left:5px;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+text-align:left;
+}
+
+#content table, td li{
+font-weight: normal;
+padding-left: 0px;
+padding-right: 15px;
+font-family:Arial, Helvetica, sans-serif;
+text-align:left;
+}
+
+
+#leftmenu {
+padding: 0px 15px;
+margin: 15px 0px;
+font-size:12px;
+text-align:left;
+}
+
+#leftmenu ul, li{
+list-style-type:square;
+padding: 0px;
+margin: 0 0 0 8px;
+font-size:12px;
+font-weight: bold;
+color: #243459;
+}
+
+#leftmenu ul, li a{
+color: #243459;
+text-decoration:none;
+}
+
+#leftmenu ul, li a:visited{
+color: #243459;
+text-decoration:none;
+}
+
+#leftmenu ul, li a:hover{
+color: #ED7600;
+text-decoration:underline;
+}
+
+#leftmenu ul, li a:active{
+color: #ED7600;
+text-decoration:none;
+}
