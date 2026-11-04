@@ -1,0 +1,10 @@
+A:link{color:#FFFFFF;text-decoration:underline;}
+A:visited{color:#FFFFFF;text-decoration:underline;}
+A:hover{color:#FFFFFF;text-decoration:underline;}
+a:active{color:#FFFFFF;text-decoration:none;}
+body{background-color:#FFFFFF}
+h1{color:#666666;margin-left:0.4cm;margin-right:0.3cm;font-weight:normal;font-style:normal;font-size:10pt;text-align:left;font-family:Arial,Verdana,Helvetica,sans-serif;}
+h2{color:#666666;margin-left:0.4cm;margin-right:0.3cm;font-weight:normal;font-style:normal;font-size:10pt;text-align:left;font-family:Arial,Verdana,Helvetica,sans-serif;}
+h3{color:#666666;font-weight:bold;font-style:italique;font-size:14pt;text-align:center;font-family:Gill Sanse;text-decoration:underline;}
+h4{color:#666666;font-size:12pt;text-align:center;vertical-align:top;font-style:italique;font-weight:bold;font-family:Arial;}
+.menu{color:#FFFFFF;text-align:center;text-decoration:none;font-family: Arial,Verdana,Helvetica,sans-serif;font size:10pt;}
