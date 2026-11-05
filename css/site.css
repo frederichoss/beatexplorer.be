@@ -1,96 +1,104 @@
-/* Static GitHub Pages styles for Beat Explorer */
-:root {
-  color-scheme: light;
-  --navy: #121f3d;
-  --blue: #243459;
-  --orange: #ed7600;
-  --paper: #fff;
-  --muted: #f1f3f6;
-}
+/* Reuse the original Beat Explorer stylesheet, then adapt its legacy look to the static-page markup. */
+@import url("beatexplorer.css");
 
-* { box-sizing: border-box; }
-html { min-width: 320px; }
+/* The original site was a fixed-width, 686px layout with compact typography. */
+* { box-sizing: content-box; }
+html { min-width: 0; }
 body {
   margin: 0;
-  padding: 24px;
-  background: #e9edf3 url("../images/bg.gif") repeat-x top;
-  color: var(--blue);
-  font: 16px/1.6 Arial, Helvetica, sans-serif;
+  padding: 15px;
+  background: #fff url("../images/bg.gif") repeat-x top;
+  color: #243459;
+  font: 12px Arial, Helvetica, sans-serif;
 }
-a { color: #0645ad; }
-a:hover, a:focus-visible { color: var(--orange); }
+a { color: #00f; }
+a:hover, a:focus-visible { color: #f27800; }
+
 .site-shell {
-  width: min(100%, 980px);
+  width: 686px;
+  max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
-  background: var(--paper);
-  border: 1px solid #d5dbe5;
-  border-radius: 8px;
-  box-shadow: 0 8px 30px rgb(18 31 61 / 12%);
+  overflow: visible;
+  background: #fff url("../images/bg_content.gif") repeat-y top;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .site-header {
-  min-height: 120px;
+  min-height: 97px;
+  display: block;
+  padding: 0;
+  background: #121f3d url("../images/bg_header.gif") repeat-x top;
+  color: #fff;
+}
+.brand { display: block; width: 100%; height: 97px; background: url("../images/header.gif") no-repeat top left; }
+.brand img, .site-header p { display: none; }
+.site-nav {
+  min-height: 29px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px 28px;
-  background: var(--navy) url("../images/bg_header.gif") center/cover no-repeat;
-  color: #fff;
-}
-.brand { display: inline-flex; align-items: center; }
-.brand img { display: block; width: min(220px, 52vw); height: auto; }
-.site-header p { margin: 0; font-weight: 700; }
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 10px 18px;
-  background: var(--navy) url("../images/bg_navigation.gif") center/auto 100% repeat-x;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  background: #121f3d url("../images/bg_navigation.gif") repeat-x top;
 }
 .site-nav a {
-  padding: 8px 12px;
-  border-radius: 4px;
+  padding: 8px 7px;
+  border-radius: 0;
   color: #fff;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
 }
 .site-nav a:hover, .site-nav a:focus-visible, .site-nav a[aria-current="page"] {
-  background: #fff;
-  color: var(--navy);
+  background: transparent;
+  color: #ed7600;
+  text-decoration: underline;
 }
-.page-content { min-height: 360px; padding: 28px clamp(20px, 5vw, 48px) 42px; }
-h1, h2 { line-height: 1.25; color: var(--navy); }
-h1 { margin: 0 0 22px; font-size: clamp(1.7rem, 3vw, 2.2rem); }
-h2 { margin-top: 1.7em; font-size: 1.3rem; }
-.page-content p { max-width: 75ch; }
-.page-content li { margin: 0.35em 0; }
-.contact-card { margin: 30px 0 20px; padding: 20px 24px; border-left: 4px solid var(--orange); background: var(--muted); }
+.page-content {
+  min-height: 360px;
+  margin: 0;
+  padding: 15px;
+  border-left: 1px solid #d4d8df;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+.page-content p { max-width: none; }
+.page-content li { margin: 0; }
+h1, h2 { color: #243459; line-height: normal; }
+h1 { margin: 0 0 1em; font-size: 18px; }
+h2 { margin: 1.5em 0 0.75em; font-size: 14px; }
+.contact-card {
+  margin: 15px 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
 .contact-card h2 { margin-top: 0; }
 address { font-style: normal; }
-.content-with-gallery { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 28px; align-items: start; }
-.gallery { display: grid; gap: 12px; }
-.gallery img { display: block; width: 100%; height: auto; border: 1px solid #d5dbe5; }
-.gallery a:focus-visible { outline: 3px solid var(--orange); }
-.brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 22px 0; }
-.brand-grid a { display: flex; min-height: 92px; align-items: center; gap: 14px; padding: 12px; border: 1px solid #d5dbe5; border-radius: 5px; background: #fff; font-weight: 700; text-decoration: none; }
-.brand-grid a:hover { background: var(--muted); }
-.brand-grid img { width: 60px; height: 60px; object-fit: contain; }
-.map-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
-.map-gallery img { width: 100%; height: auto; border: 1px solid #d5dbe5; }
+.content-with-gallery { display: block; }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 15px;
+}
+.gallery img { display: block; width: auto; max-width: 100%; height: auto; border: 0; }
+.brand-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
+.brand-grid a { min-height: 0; gap: 8px; padding: 6px; border: 0; border-radius: 0; font-weight: normal; }
+.brand-grid a:hover { background: transparent; }
+.brand-grid img { width: auto; height: auto; max-width: 120px; max-height: 60px; object-fit: contain; }
+.map-gallery { display: flex; flex-wrap: wrap; gap: 8px; }
+.map-gallery img { width: auto; max-width: 100%; height: auto; border: 0; }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
-th, td { padding: 10px 12px; border-bottom: 1px solid #d5dbe5; text-align: left; vertical-align: top; }
-th { background: var(--muted); }
-.site-footer { padding: 18px 28px; background: var(--navy); color: #fff; }
-.site-footer a { color: #fff; }
-hr { margin: 26px 0; border: 0; border-top: 1px solid #c8cfda; }
-@media (max-width: 650px) {
-  body { padding: 10px; }
-  .site-header { min-height: 96px; padding: 14px 18px; }
-  .site-header p { max-width: 120px; text-align: right; font-size: 0.9rem; }
-  .site-nav { padding: 8px; gap: 2px; }
-  .site-nav a { padding: 7px 9px; font-size: 0.92rem; }
-  .content-with-gallery { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+th, td { padding: 4px; border: 0; text-align: left; vertical-align: top; }
+th { background: transparent; }
+.site-footer { padding: 0; background: transparent; color: #243459; }
+.site-footer a { color: #00f; }
+hr { margin: 1em 0; border-top: 1px solid #d4d8df; }
+
+@media (max-width: 716px) {
+  body { padding: 8px; }
+  .site-shell { width: 100%; }
+  .site-nav { flex-wrap: wrap; }
+  .site-nav a { padding: 7px 5px; }
 }
